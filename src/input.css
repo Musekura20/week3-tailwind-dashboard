@@ -17,3 +17,56 @@
 
   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
 }
+
+/* 3. COMPONENTS: reusable classes made with @apply */
+@layer components {
+  /* Main green button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand-700 px-4 py-2 text-sm font-semibold text-white shadow-xs transition hover:bg-brand-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 active:scale-95;
+  }
+
+  /* White / outlined button */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-800 transition hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 active:scale-95;
+  }
+
+  /* White box used for every panel */
+  .card {
+    @apply rounded-xl border border-slate-200 bg-white p-5 shadow-xs;
+  }
+
+  /* Small colored status label (use it together with one color class below) */
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+  .badge-paid {
+    @apply bg-green-100 text-green-800;
+  }
+  .badge-pending {
+    @apply bg-amber-100 text-amber-800;
+  }
+  .badge-failed {
+    @apply bg-red-100 text-red-800;
+  }
+
+  /* Sidebar link (the current page uses aria-current="page") */
+  .nav-link {
+    @apply flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-brand-50 hover:text-brand-800 focus-visible:outline-2 focus-visible:outline-brand-600 aria-[current=page]:bg-brand-100 aria-[current=page]:text-brand-800;
+  }
+
+  /* Icons (SVG) and the round green box behind some icons */
+  .icon {
+    @apply size-5 shrink-0 fill-none stroke-current stroke-2;
+  }
+  .icon-box {
+    @apply grid size-10 shrink-0 place-items-center rounded-lg bg-brand-100 text-brand-700;
+  }
+
+  /* Form parts */
+  .field-label {
+    @apply mb-1 block text-sm font-medium text-slate-700;
+  }
+  .input-field {
+    @apply block w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 transition placeholder:text-slate-500 focus:border-brand-600 focus:ring-2 focus:ring-brand-600/30 focus:outline-hidden;
+  }
+}
