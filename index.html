@@ -70,6 +70,26 @@
     <!-- Everything on the right of the sidebar. lg:pl-64 leaves room for the 16rem (w-64) sidebar. -->
     <div class="flex min-h-screen flex-col lg:pl-64">
 
+      <!-- ============ TOP BAR ============ -->
+      <header class="sticky top-0 z-20 flex flex-wrap items-center gap-3 border-b border-slate-200 bg-white/90 px-4 py-3 backdrop-blur md:px-6">
+        <!-- Menu button: only on screens smaller than lg -->
+        <label for="menu-toggle" class="grid size-10 cursor-pointer place-items-center rounded-lg text-slate-700 transition hover:bg-slate-100 lg:hidden">
+          <svg class="icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16" /><path d="M4 12h16" /><path d="M4 18h16" /></svg>
+          <span class="sr-only">Menu</span>
+        </label>
+
+        <h1 class="flex-1 text-lg font-semibold md:flex-none md:text-xl">Dashboard</h1>
+
+        <!-- Search: its own row on phones (order-last + w-full), on the right from md up -->
+        <div class="relative order-last w-full md:order-none md:ml-auto md:w-72">
+          <label for="search" class="sr-only">Search transactions</label>
+          <svg class="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 fill-none stroke-slate-500 stroke-2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>
+          <input id="search" type="search" placeholder="Search transactions" class="input-field pl-9" />
+        </div>
+
+        <img src="./assets/avatar.svg" alt="Grace Mukamana, administrator" width="40" height="40" class="size-10 rounded-full ring-2 ring-brand-200" />
+      </header>
+
       <!-- ============ MAIN CONTENT ============ -->
       <main id="main" class="flex-1 space-y-6 p-4 md:p-6">
 
