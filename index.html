@@ -301,6 +301,43 @@
             </ul>
           </section>
 
+          <!-- Panel 3: Send money form (full width on lg, 1 column on xl) -->
+          <section class="card lg:col-span-2 xl:col-span-1" aria-labelledby="form-title">
+            <h2 id="form-title" class="text-base font-semibold">Send money</h2>
+            <form action="#" class="mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-1">
+              <div class="sm:col-span-2 xl:col-span-1">
+                <label for="recipient" class="field-label">Recipient name</label>
+                <input id="recipient" name="recipient" type="text" autocomplete="name" placeholder="e.g. Aline Uwase" required class="input-field" />
+              </div>
+
+              <div>
+                <label for="phone" class="field-label">Phone number</label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="078 000 0000" required class="input-field" />
+              </div>
+
+              <div>
+                <label for="network" class="field-label">Network</label>
+                <select id="network" name="network" class="input-field">
+                  <option>MTN MoMo</option>
+                  <option>Airtel Money</option>
+                </select>
+              </div>
+
+              <div class="sm:col-span-2 xl:col-span-1">
+                <label for="amount" class="field-label">Amount (RWF)</label>
+                <input id="amount" name="amount" type="number" min="100" step="100" placeholder="e.g. 10000" required class="input-field" />
+              </div>
+
+              <div class="flex flex-wrap justify-end gap-3 sm:col-span-2 xl:col-span-1">
+                <button type="reset" class="btn-secondary">Cancel</button>
+                <button type="submit" class="btn-primary">
+                  <svg class="icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13" /><path d="M22 2 15 22l-4-9-9-4 20-7z" /></svg>
+                  Send money
+                </button>
+              </div>
+            </form>
+          </section>
+
         </div>
 
       </main>
