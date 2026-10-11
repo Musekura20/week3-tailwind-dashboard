@@ -1,0 +1,16 @@
+{
+  "name": "week3-tailwind-dashboard",
+  "version": "1.0.0",
+  "description": "PayWave - responsive mobile money admin dashboard built with Tailwind CSS",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "keywords": [],
+  "author": "Musekura20",
+  "license": "MIT",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
