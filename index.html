@@ -140,6 +140,95 @@
           </article>
         </section>
 
+        <!-- ===== TRANSACTIONS TABLE: overflow-x-auto = scroll sideways on small screens ===== -->
+        <section class="card overflow-hidden p-0" aria-labelledby="tx-title">
+          <div class="flex items-center justify-between gap-3 p-5">
+            <h2 id="tx-title" class="text-base font-semibold">Recent transactions</h2>
+            <a href="#" class="rounded-md text-sm font-medium text-brand-700 transition hover:text-brand-900 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600">View all</a>
+          </div>
+
+          <div class="overflow-x-auto focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-600" role="region" aria-label="Recent transactions table, scroll sideways on small screens" tabindex="0">
+            <table class="w-full min-w-176 text-left text-sm">
+              <thead class="bg-slate-50 text-xs tracking-wide text-slate-600 uppercase">
+                <tr>
+                  <th scope="col" class="px-5 py-3 font-semibold">Reference</th>
+                  <th scope="col" class="px-5 py-3 font-semibold">Customer</th>
+                  <th scope="col" class="px-5 py-3 font-semibold">Type</th>
+                  <th scope="col" class="px-5 py-3 font-semibold">Network</th>
+                  <th scope="col" class="px-5 py-3 text-right font-semibold">Amount (RWF)</th>
+                  <th scope="col" class="px-5 py-3 font-semibold">Date</th>
+                  <th scope="col" class="px-5 py-3 font-semibold">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-t border-slate-100 transition-colors hover:bg-brand-50/60">
+                  <td class="px-5 py-3 font-medium whitespace-nowrap">TXN-1001</td>
+                  <td class="px-5 py-3 whitespace-nowrap">Aline Uwase</td>
+                  <td class="px-5 py-3 whitespace-nowrap">Send money</td>
+                  <td class="px-5 py-3 whitespace-nowrap">MTN MoMo</td>
+                  <td class="px-5 py-3 text-right whitespace-nowrap tabular-nums">45,000</td>
+                  <td class="px-5 py-3 whitespace-nowrap">10 Oct 2026</td>
+                  <td class="px-5 py-3 whitespace-nowrap"><span class="badge badge-paid">Paid</span></td>
+                </tr>
+                <tr class="border-t border-slate-100 transition-colors hover:bg-brand-50/60">
+                  <td class="px-5 py-3 font-medium whitespace-nowrap">TXN-1002</td>
+                  <td class="px-5 py-3 whitespace-nowrap">Eric Mugisha</td>
+                  <td class="px-5 py-3 whitespace-nowrap">Airtime</td>
+                  <td class="px-5 py-3 whitespace-nowrap">Airtel Money</td>
+                  <td class="px-5 py-3 text-right whitespace-nowrap tabular-nums">5,000</td>
+                  <td class="px-5 py-3 whitespace-nowrap">10 Oct 2026</td>
+                  <td class="px-5 py-3 whitespace-nowrap"><span class="badge badge-paid">Paid</span></td>
+                </tr>
+                <tr class="border-t border-slate-100 transition-colors hover:bg-brand-50/60">
+                  <td class="px-5 py-3 font-medium whitespace-nowrap">TXN-1003</td>
+                  <td class="px-5 py-3 whitespace-nowrap">Diane Ingabire</td>
+                  <td class="px-5 py-3 whitespace-nowrap">Bill payment</td>
+                  <td class="px-5 py-3 whitespace-nowrap">MTN MoMo</td>
+                  <td class="px-5 py-3 text-right whitespace-nowrap tabular-nums">120,000</td>
+                  <td class="px-5 py-3 whitespace-nowrap">9 Oct 2026</td>
+                  <td class="px-5 py-3 whitespace-nowrap"><span class="badge badge-pending">Pending</span></td>
+                </tr>
+                <tr class="border-t border-slate-100 transition-colors hover:bg-brand-50/60">
+                  <td class="px-5 py-3 font-medium whitespace-nowrap">TXN-1004</td>
+                  <td class="px-5 py-3 whitespace-nowrap">Patrick Niyonzima</td>
+                  <td class="px-5 py-3 whitespace-nowrap">Send money</td>
+                  <td class="px-5 py-3 whitespace-nowrap">Airtel Money</td>
+                  <td class="px-5 py-3 text-right whitespace-nowrap tabular-nums">80,000</td>
+                  <td class="px-5 py-3 whitespace-nowrap">9 Oct 2026</td>
+                  <td class="px-5 py-3 whitespace-nowrap"><span class="badge badge-failed">Failed</span></td>
+                </tr>
+                <tr class="border-t border-slate-100 transition-colors hover:bg-brand-50/60">
+                  <td class="px-5 py-3 font-medium whitespace-nowrap">TXN-1005</td>
+                  <td class="px-5 py-3 whitespace-nowrap">Chantal Mukamana</td>
+                  <td class="px-5 py-3 whitespace-nowrap">Receive money</td>
+                  <td class="px-5 py-3 whitespace-nowrap">MTN MoMo</td>
+                  <td class="px-5 py-3 text-right whitespace-nowrap tabular-nums">250,000</td>
+                  <td class="px-5 py-3 whitespace-nowrap">8 Oct 2026</td>
+                  <td class="px-5 py-3 whitespace-nowrap"><span class="badge badge-paid">Paid</span></td>
+                </tr>
+                <tr class="border-t border-slate-100 transition-colors hover:bg-brand-50/60">
+                  <td class="px-5 py-3 font-medium whitespace-nowrap">TXN-1006</td>
+                  <td class="px-5 py-3 whitespace-nowrap">Jean Claude Habimana</td>
+                  <td class="px-5 py-3 whitespace-nowrap">Bill payment</td>
+                  <td class="px-5 py-3 whitespace-nowrap">Airtel Money</td>
+                  <td class="px-5 py-3 text-right whitespace-nowrap tabular-nums">36,500</td>
+                  <td class="px-5 py-3 whitespace-nowrap">8 Oct 2026</td>
+                  <td class="px-5 py-3 whitespace-nowrap"><span class="badge badge-pending">Pending</span></td>
+                </tr>
+                <tr class="border-t border-slate-100 transition-colors hover:bg-brand-50/60">
+                  <td class="px-5 py-3 font-medium whitespace-nowrap">TXN-1007</td>
+                  <td class="px-5 py-3 whitespace-nowrap">Sandrine Uwimana</td>
+                  <td class="px-5 py-3 whitespace-nowrap">Send money</td>
+                  <td class="px-5 py-3 whitespace-nowrap">MTN MoMo</td>
+                  <td class="px-5 py-3 text-right whitespace-nowrap tabular-nums">15,000</td>
+                  <td class="px-5 py-3 whitespace-nowrap">7 Oct 2026</td>
+                  <td class="px-5 py-3 whitespace-nowrap"><span class="badge badge-paid">Paid</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
       </main>
 
       <footer class="px-4 py-6 text-center text-xs text-slate-600 md:px-6">
