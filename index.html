@@ -6,42 +6,80 @@
     <title>PayWave Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-slate-50 p-6 font-sans text-slate-800">
-    <h1 class="text-2xl font-bold">Component preview</h1>
-    <p class="mt-1 text-slate-600">
-      Testing our reusable classes. We will replace this page with the real
-      dashboard in the next branch.
-    </p>
 
-    <div class="card mt-6 max-w-md space-y-4">
-      <h2 class="text-lg font-semibold">.card, .badge and buttons</h2>
+  <body class="bg-slate-50 font-sans text-slate-800 antialiased">
 
-      <div class="flex flex-wrap gap-2">
-        <span class="badge badge-paid">Paid</span>
-        <span class="badge badge-pending">Pending</span>
-        <span class="badge badge-failed">Failed</span>
+    <!-- Menu switch for small screens. A hidden checkbox + "peer-checked:" = a menu with NO JavaScript. -->
+    <input type="checkbox" id="menu-toggle" class="peer sr-only" aria-label="Open or close the menu" />
+
+    <!-- Dark layer behind the open menu. Clicking it closes the menu. -->
+    <label for="menu-toggle" class="fixed inset-0 z-30 hidden bg-black/50 peer-checked:block lg:peer-checked:hidden"></label>
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="invisible fixed inset-y-0 left-0 z-40 flex w-64 -translate-x-full flex-col border-r border-slate-200 bg-white transition-[transform,visibility] duration-200 peer-checked:visible peer-checked:translate-x-0 lg:visible lg:translate-x-0">
+      <!-- Logo -->
+      <div class="flex h-16 shrink-0 items-center gap-3 border-b border-slate-200 px-5">
+        <span class="grid size-9 place-items-center rounded-lg bg-brand-700 text-lg font-bold text-white" aria-hidden="true">P</span>
+        <span class="text-lg font-bold tracking-tight">PayWave</span>
       </div>
 
-      <div>
-        <label for="demo" class="field-label">Input with a label</label>
-        <input
-          id="demo"
-          type="text"
-          placeholder="Type here"
-          class="input-field"
-        />
-      </div>
+      <!-- Links -->
+      <nav aria-label="Main" class="flex-1 space-y-1 overflow-y-auto p-4">
+        <a href="#" class="nav-link" aria-current="page">
+          <svg class="icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" /><rect x="3" y="14" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" /></svg>
+          Dashboard
+        </a>
+        <a href="#" class="nav-link">
+          <svg class="icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13" /><path d="M22 2 15 22l-4-9-9-4 20-7z" /></svg>
+          Send Money
+        </a>
+        <a href="#" class="nav-link">
+          <svg class="icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2" /><path d="M2 10h20" /><path d="M6 15h4" /></svg>
+          Wallets
+        </a>
+        <a href="#" class="nav-link">
+          <svg class="icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3l4 4-4 4" /><path d="M21 7H9" /><path d="M7 21l-4-4 4-4" /><path d="M3 17h12" /></svg>
+          Transactions
+        </a>
+        <a href="#" class="nav-link">
+          <svg class="icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4" /><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1" /><path d="M16 4a4 4 0 0 1 0 8" /><path d="M22 21v-1a6 6 0 0 0-4-5.6" /></svg>
+          Customers
+        </a>
+        <a href="#" class="nav-link">
+          <svg class="icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10" /><path d="M10 20V4" /><path d="M16 20v-7" /><path d="M22 20H2" /></svg>
+          Reports
+        </a>
+        <a href="#" class="nav-link">
+          <svg class="icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h8" /><path d="M18 6h2" /><circle cx="15" cy="6" r="2" /><path d="M4 12h2" /><path d="M12 12h8" /><circle cx="9" cy="12" r="2" /><path d="M4 18h10" /><path d="M20 18h0" /><circle cx="17" cy="18" r="2" /></svg>
+          Settings
+        </a>
+      </nav>
 
-      <div class="flex gap-3">
-        <button type="button" class="btn-primary">Primary</button>
-        <button type="button" class="btn-secondary">Secondary</button>
+      <!-- Log out -->
+      <div class="border-t border-slate-200 p-4">
+        <a href="#" class="nav-link">
+          <svg class="icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /><path d="M16 17l5-5-5-5" /><path d="M21 12H9" /></svg>
+          Log out
+        </a>
       </div>
+    </aside>
+
+    <!-- Everything on the right of the sidebar. lg:pl-64 leaves room for the 16rem (w-64) sidebar. -->
+    <div class="flex min-h-screen flex-col lg:pl-64">
+
+      <!-- ============ MAIN CONTENT ============ -->
+      <main id="main" class="flex-1 space-y-6 p-4 md:p-6">
+
+        <p class="text-slate-600">Dashboard content coming soon.</p>
+
+      </main>
+
+      <footer class="px-4 py-6 text-center text-xs text-slate-600 md:px-6">
+        &copy; 2026 PayWave. A student demo project built with Tailwind CSS.
+      </footer>
     </div>
   </body>
 </html>
