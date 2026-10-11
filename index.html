@@ -229,6 +229,80 @@
           </div>
         </section>
 
+        <!-- ===== THREE PANELS: 1 column on phones, 2 on lg, 3 on xl ===== -->
+        <div class="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+
+          <!-- Panel 1: Recent activity -->
+          <section class="card" aria-labelledby="activity-title">
+            <h2 id="activity-title" class="text-base font-semibold">Recent activity</h2>
+            <ul class="mt-4 divide-y divide-slate-100">
+              <li class="flex items-center gap-3 py-3">
+                <span class="icon-box size-9"><svg class="icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 7 7 17" /><path d="M16 17H7V8" /></svg></span>
+                <p class="flex-1 text-sm">Aline Uwase sent you <strong class="font-semibold">RWF 45,000</strong></p>
+                <span class="text-xs whitespace-nowrap text-slate-600">2 min ago</span>
+              </li>
+              <li class="flex items-center gap-3 py-3">
+                <span class="icon-box size-9"><svg class="icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2" /><path d="M11 18h2" /></svg></span>
+                <p class="flex-1 text-sm">Airtime top-up completed for Eric Mugisha</p>
+                <span class="text-xs whitespace-nowrap text-slate-600">1 hour ago</span>
+              </li>
+              <li class="flex items-center gap-3 py-3">
+                <span class="icon-box size-9"><svg class="icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4" /><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1" /><path d="M19 8v6" /><path d="M16 11h6" /></svg></span>
+                <p class="flex-1 text-sm">New customer registered: Sandrine Uwimana</p>
+                <span class="text-xs whitespace-nowrap text-slate-600">3 hours ago</span>
+              </li>
+              <li class="flex items-center gap-3 py-3">
+                <span class="icon-box size-9"><svg class="icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg></span>
+                <p class="flex-1 text-sm">Bill payment is waiting for approval</p>
+                <span class="text-xs whitespace-nowrap text-slate-600">Yesterday</span>
+              </li>
+              <li class="flex items-center gap-3 py-3">
+                <span class="icon-box size-9"><svg class="icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 8v5" /><path d="M12 16h0" /></svg></span>
+                <p class="flex-1 text-sm">Transfer to Patrick Niyonzima failed</p>
+                <span class="text-xs whitespace-nowrap text-slate-600">Yesterday</span>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Panel 2: Spending by category (progress bars) -->
+          <section class="card" aria-labelledby="spending-title">
+            <h2 id="spending-title" class="text-base font-semibold">Spending by category</h2>
+            <ul class="mt-4 space-y-4">
+              <li>
+                <div class="flex items-center justify-between text-sm"><span class="font-medium">Airtime</span><span class="text-slate-600">35%</span></div>
+                <div class="mt-2 h-2 rounded-full bg-slate-100" role="progressbar" aria-label="Airtime" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+                  <div class="h-2 w-[35%] rounded-full bg-brand-600"></div>
+                </div>
+              </li>
+              <li>
+                <div class="flex items-center justify-between text-sm"><span class="font-medium">Bills</span><span class="text-slate-600">25%</span></div>
+                <div class="mt-2 h-2 rounded-full bg-slate-100" role="progressbar" aria-label="Bills" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                  <div class="h-2 w-[25%] rounded-full bg-brand-600"></div>
+                </div>
+              </li>
+              <li>
+                <div class="flex items-center justify-between text-sm"><span class="font-medium">Transfers</span><span class="text-slate-600">20%</span></div>
+                <div class="mt-2 h-2 rounded-full bg-slate-100" role="progressbar" aria-label="Transfers" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                  <div class="h-2 w-[20%] rounded-full bg-brand-600"></div>
+                </div>
+              </li>
+              <li>
+                <div class="flex items-center justify-between text-sm"><span class="font-medium">Shopping</span><span class="text-slate-600">12%</span></div>
+                <div class="mt-2 h-2 rounded-full bg-slate-100" role="progressbar" aria-label="Shopping" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100">
+                  <div class="h-2 w-[12%] rounded-full bg-brand-600"></div>
+                </div>
+              </li>
+              <li>
+                <div class="flex items-center justify-between text-sm"><span class="font-medium">Other</span><span class="text-slate-600">8%</span></div>
+                <div class="mt-2 h-2 rounded-full bg-slate-100" role="progressbar" aria-label="Other" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100">
+                  <div class="h-2 w-[8%] rounded-full bg-brand-600"></div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+        </div>
+
       </main>
 
       <footer class="px-4 py-6 text-center text-xs text-slate-600 md:px-6">
