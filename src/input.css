@@ -1,2 +1,19 @@
 /* PayWave - Tailwind entry file (the only CSS file we write) */
 @import "tailwindcss";
+
+/* 1. THEME: our brand colors and our font.
+   Tailwind turns each --color-brand-* into classes like bg-brand-700 and text-brand-50. */
+@theme {
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-200: #bbf7d0;
+  --color-brand-300: #86efac;
+  --color-brand-400: #4ade80;
+  --color-brand-500: #22c55e;
+  --color-brand-600: #16a34a;
+  --color-brand-700: #15803d;
+  --color-brand-800: #166534;
+  --color-brand-900: #14532d;
+
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+}
